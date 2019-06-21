@@ -63,13 +63,14 @@ export default {
             });
             user = auth.currentUser;
             user.sendEmailVerification().then(function() {
-              alert("Usuario Registrado. Verifique su correo.");
+              alert("Usuario Registrado. Verifique su correo."+user.email);
             });
           })
           .catch(function(error) {
             alert("!!!Usuario Existente!!!" + error);
+
           });
-        this.$router.push({ path: "/" });
+        this.$router.push({ path: "/registro" });
       } else {
         alert("Contraseña debil");
       }

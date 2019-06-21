@@ -25,6 +25,10 @@
         </div>
         <div class="col-sm-5" id="text">
           <b-img width="600px" src="https://cdn.pixabay.com/photo/2016/07/01/09/05/space-1490668_960_720.png"></b-img>
+
+          <h1 style="margin-top:40px" class="text-center" v-if="!user">Si ya te registraste recuerda verificar tu dirección de correo electronico</h1><h1 class="text-center" style="margin-top:40px" v-else>Has iniciado sesión</h1>
+         
+          <p  class="text-center" v-if="!user">No aparecera la bolsa de compras ni podras visualizar los productos.</p>
         </div>
       </div>
     </div>
